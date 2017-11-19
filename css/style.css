@@ -1,0 +1,74 @@
+/* all*/
+*{
+    margin:0;
+    padding:0;
+    border:none;
+    font-size: 1.5625vw;
+    font-family: "Microsoft YaHei";
+
+}
+
+html,
+body{
+    height:100%;
+}
+
+/* music */
+#music{
+    position:fixed;
+    top:3vh;
+    right:4vw;
+    z-index: 5;
+    width:15vw;
+    height: 15vw;
+    border: 4px solid #ef1639;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+#music >img:first-of-type{
+    postion:absolute;
+    top:24%;
+    right:2.5%;
+    width:28.421%;
+}
+
+#music >img:last-of-type{
+    postion:absolute;
+    top:0;
+    right:0;
+    bottom: 0;
+    left:0;
+    margin:auto;
+    width:79%;
+}
+
+/* music */
+.page{
+    height:100%;
+}
+.page>.bg{
+    positon:absolute;
+    width:100%;
+    height:100%;
+    z-index:-1;
+
+}
+
+/* pg 1 */
+#page1>.bg{
+    background: url('../images/p1_bg.jpg') no-repeat center center;
+    background-size: 100%;
+}
+
+
+/* pg 2 */
+#page2>.bg{
+    background: url('../images/p2_bg.jpg') no-repeat center center;
+    background-size: 100%;
+}
+/* pg 3 */
+#page3>.bg{
+    background: url('../images/p3_bg.jpg') no-repeat center center;
+    background-size: 100%;
+}
