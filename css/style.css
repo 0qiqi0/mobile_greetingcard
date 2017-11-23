@@ -1,5 +1,5 @@
 /* all*/
-*{
+* {
     margin:0;
     padding:0;
     border:none;
@@ -8,8 +8,7 @@
 
 }
 
-html,
-body{
+html,body{
     height:100%;
 }
 
@@ -31,6 +30,7 @@ body{
     top:24%;
     right:2.5%;
     width:28.421%;
+    z-index: 1;
 }
 
 #music >img:last-of-type{
@@ -41,11 +41,41 @@ body{
     left:0;
     margin:auto;
     width:79%;
+    z-index: 0;
 }
 
-/* music */
+#music >img.play{
+    -webkit-animation: music_disc 4s linear infinite;
+   animation: music_disc 4s linear infinite;
+}
+@-webkit-keyframes music_disc {
+    0%{
+        -webkit-transform:  rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform:  rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes music_disc {
+    0%{
+        -webkit-transform:  rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform:  rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
 .page{
     height:100%;
+    position: absolute;
+    width:100%;
 }
 .page>.bg{
     positon:absolute;
@@ -54,12 +84,115 @@ body{
     z-index:-1;
 
 }
+#page3 {
+    display: none;
+}
 
 /* pg 1 */
 #page1>.bg{
     background: url('../images/p1_bg.jpg') no-repeat center center;
     background-size: 100%;
+
 }
+#page1>.p1_lantern {
+    position: absolute;
+    top:-3.4%;
+    right:0;
+    left:0;
+    margin:auto;
+    width:45vw;
+    height: 71.2vh;
+    font-size: 3.506rem;
+    background: url('../images/p1_lantern.png') no-repeat center bottom;
+    background-size: 100%;
+    padding-top: 31vh;
+    box-sizing: border-box;
+    text-align: center;
+    -webkit-box-sizing : border-box;
+       -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+         -o-box-sizing: border-box;
+}
+
+
+#page1 > .p1_lantern:before{
+    position: absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    content:"";
+    margin:auto;
+    width:30vw;
+    //z-index:-1;
+    height: 30vw;
+    background-color: #d60b3b;
+    opacity: .5;
+    border-radius:50%;
+    box-shadow: 0 0 10vw 10vw #d60b3b;
+    -webkit-box-shadow :  0 0 10vw 10vw #d60b3b;
+       -moz-box-shadow: 0 0 10vw 10vw #d60b3b;
+        -ms-box-shadow:  0 0 10vw 10vw #d60b3b;  //参数: 起点相对⬅左1上角位置的x,y坐标.虚化程度.虚化距离.颜色. -webkit-animation:;
+        animation:p1_lantern 0.5s infinite alternate;
+         -webkit-animation:p1_lantern 0.5s infinite alternate;
+
+}
+@keyframes p1_lantern {
+    0%{
+       opacity:  0.5;
+        -webkit-transform : scale(.8,.8);
+        -o-transform      :  scale(.8,.8);
+        -ms-transform     :  scale(.8,.8);
+        transform         :scale(.8,.8);
+
+    }
+
+    100%{
+        opacity:  1;
+
+    }
+}
+
+@-webkit-keyframes p1_lantern {
+    0%{
+        opacity:  0.5;
+        -webkit-transform : scale(.8,.8);
+        -o-transform      :  scale(.8,.8);
+        -ms-transform     :  scale(.8,.8);
+        transform         :scale(.8,.8);
+
+    }
+
+    100%{
+        opacity:  1;
+
+    }
+}
+
+
+#page1 > .p1_imooc{
+    position: absolute;
+    right: 0;
+    bottom: 9vh;
+    left:0;
+    background:url("../images/p1_imooc.png") no-repeat center center;
+    background-size: 100%;
+    width:27.656vw;
+    height:18.63vh;
+    margin:auto;
+}
+#page1 > .p1_words{
+    font-size: 2.134rem;
+    position: absolute;
+    right:0;
+    bottom: 48px;
+    left:0;
+    text-align: center;
+    color: #231815;
+}
+
+
+
 
 
 /* pg 2 */
@@ -67,8 +200,166 @@ body{
     background: url('../images/p2_bg.jpg') no-repeat center center;
     background-size: 100%;
 }
+
+#page2>.p2_circle{
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    margin:auto;
+    border-radius: 50%;
+    background: url('../images/p2_circle_outer.png') no-repeat center center;
+    width:59.375vw;
+    height:59.375vw;
+}
+
+#page2>.p2_circle:before{
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    margin:auto;
+    border-radius: 50%;
+    content:'';
+    background: url('../images/p2_circle_middle.png') no-repeat center center;
+    width:45.625vw;
+    height:45.625vw;
+}
+
+
+#page2>.p2_circle:after{
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    margin:auto;
+    border-radius: 50%;
+    content:'';
+    background: url('../images/p2_circle_inner.png') no-repeat center center;
+    width:39.9375vw;
+    height:39.9375vw;
+
+    animation:p2_circle_inner 1s linear 1s infinite;
+    -webkit-animation:p2_circle_inner 1s linear 1s infinite;
+
+}
+@keyframes p2_circle_inner{
+    0%{
+        -webkit-transform : rotate(0deg);
+        -o-transform      : rotate(0deg);
+        -ms-transform     :  rotate(0deg);
+        transform         :  rotate(0deg);
+    }
+    100%{
+        -webkit-transform : rotate(-1080deg);
+        -o-transform      : rotate(-1080deg);
+        -ms-transform     :  rotate(-1080deg);
+        transform         :  rotate(-1080deg);
+    }
+}
+
+@-webkit-keyframes  p2_circle_inner{
+    0%{
+        -webkit-transform : rotate(0deg);
+        -o-transform      : rotate(0deg);
+        -ms-transform     :  rotate(0deg);
+        transform         :  rotate(0deg);
+    }
+    100%{
+        -webkit-transform : rotate(-1080deg);
+        -o-transform      : rotate(-1080deg);
+        -ms-transform     :  rotate(-1080deg);
+        transform         :  rotate(-1080deg);
+    }
+}
+
+
+
+
+#page2>.p2_2018{
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    margin:auto;
+    background: url('../images/p2_2016.png') no-repeat center center;
+    width:21.5vw;
+    height:6.04vh;
+    background-size: 100%;
+}
+
+
 /* pg 3 */
+
+#page1 {
+    display: none;
+}
 #page3>.bg{
     background: url('../images/p3_bg.jpg') no-repeat center center;
     background-size: 100%;
+}
+
+#page3 > .p3_logo{
+    width:34.6875vw;
+    height:6.327vh;
+    position: absolute;
+    top:7.82vh;
+    right:0;
+    left:35vw;
+    background:url("../images/p3_logo.png") no-repeat center center;
+    background-size: 100%;
+
+}
+
+#page3 > .p3_title {
+    width:48.125vw;
+    height:50vh;
+    position:absolute;
+    top: 21vh;
+    right:0;
+    left:0;
+    margin:auto;
+    background: url('../images/p3_title.png') no-repeat center center;
+    background-size: 100%;
+
+}
+
+#page3 > .p3_first {
+    width:22.8125vw;
+    height:41.625vh;
+    position:absolute;
+    top: 25.48vh;
+    left:3.75vw;
+    background: url('../images/p3_couplet_first.png') no-repeat center center;
+    background-size: 100%;
+
+}
+#page3 > .p3_second {
+    width:22.8125vw;
+    height:41.625vh;
+    position:absolute;
+    top: 25.48vh;
+    right:3.75vw;
+    background: url('../images/p3_couplet_second.png') no-repeat center center;
+    background-size: 100%;
+
+}
+
+#page3 > .p3_blessing{
+    width:32vw;
+    height:32vw;
+    position: absolute;
+    right:0;
+    bottom: 10vh;
+    left:35vw;
+
+    background:url("../images/p3_blessing.png") no-repeat center center;
+    background-size: 100%;
+    border-radius: 50%;
+
+
 }
