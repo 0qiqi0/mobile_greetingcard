@@ -48,6 +48,7 @@ html,body{
     -webkit-animation: music_disc 4s linear infinite;
    animation: music_disc 4s linear infinite;
 }
+
 @-webkit-keyframes music_disc {
     0%{
         -webkit-transform:  rotate(0deg);
@@ -70,8 +71,6 @@ html,body{
 }
 
 
-
-
 .page{
     height:100%;
     position: absolute;
@@ -84,16 +83,19 @@ html,body{
     z-index:-1;
 
 }
-#page3 {
+
+#page2 {
     display: none;
 }
 
-/* pg 1 */
+
+/* --------pg 1 -------*/
 #page1>.bg{
     background: url('../images/p1_bg.jpg') no-repeat center center;
     background-size: 100%;
 
 }
+
 #page1>.p1_lantern {
     position: absolute;
     top:-3.4%;
@@ -113,7 +115,6 @@ html,body{
         -ms-box-sizing: border-box;
          -o-box-sizing: border-box;
 }
-
 
 #page1 > .p1_lantern:before{
     position: absolute;
@@ -144,12 +145,10 @@ html,body{
         -o-transform      :  scale(.8,.8);
         -ms-transform     :  scale(.8,.8);
         transform         :scale(.8,.8);
-
     }
 
     100%{
         opacity:  1;
-
     }
 }
 
@@ -160,7 +159,6 @@ html,body{
         -o-transform      :  scale(.8,.8);
         -ms-transform     :  scale(.8,.8);
         transform         :scale(.8,.8);
-
     }
 
     100%{
@@ -168,7 +166,6 @@ html,body{
 
     }
 }
-
 
 #page1 > .p1_imooc{
     position: absolute;
@@ -181,6 +178,7 @@ html,body{
     height:18.63vh;
     margin:auto;
 }
+
 #page1 > .p1_words{
     font-size: 2.134rem;
     position: absolute;
@@ -212,9 +210,12 @@ html,body{
     background: url('../images/p2_circle_outer.png') no-repeat center center;
     width:59.375vw;
     height:59.375vw;
+
+    animation:p2_circle_outer 2s linear 3s infinite;
+    -webkit-animation:p2_circle_outer 2s linear 3s infinite;
 }
 
-#page2>.p2_circle:before{
+#page2>.p2_circle::before{
     position:absolute;
     top:0;
     right:0;
@@ -226,10 +227,13 @@ html,body{
     background: url('../images/p2_circle_middle.png') no-repeat center center;
     width:45.625vw;
     height:45.625vw;
+
+    animation:p2_circle_middle 1s linear 2s infinite;
+    -webkit-animation:p2_circle_middle 1s linear 2s infinite;
 }
 
 
-#page2>.p2_circle:after{
+#page2>.p2_circle::after{
     position:absolute;
     top:0;
     right:0;
@@ -276,7 +280,67 @@ html,body{
     }
 }
 
+/*第二个圈*/
+@keyframes p2_circle_middle{
+    0%{
+        -webkit-transform : rotate(0deg);
+        -o-transform      : rotate(0deg);
+        -ms-transform     :  rotate(0deg);
+        transform         :  rotate(0deg);
+    }
+    100%{
+        -webkit-transform : rotate(-1080deg);
+        -o-transform      : rotate(-1080deg);
+        -ms-transform     :  rotate(-1080deg);
+        transform         :  rotate(-1080deg);
+    }
+}
 
+@-webkit-keyframes  p2_circle_middle{
+    0%{
+        -webkit-transform : rotate(0deg);
+        -o-transform      : rotate(0deg);
+        -ms-transform     :  rotate(0deg);
+        transform         :  rotate(0deg);
+    }
+    100%{
+        -webkit-transform : rotate(-1080deg);
+        -o-transform      : rotate(-1080deg);
+        -ms-transform     :  rotate(-1080deg);
+        transform         :  rotate(-1080deg);
+    }
+}
+
+/*第3个圈*/
+@keyframes p2_circle_outer{
+    0%{
+        -webkit-transform : rotate(0deg);
+        -o-transform      : rotate(0deg);
+        -ms-transform     :  rotate(0deg);
+        transform         :  rotate(0deg);
+    }
+    100%{
+        -webkit-transform : rotate(720deg);
+        -o-transform      : rotate(720deg);
+        -ms-transform     :  rotate(720deg);
+        transform         :  rotate(720deg);
+    }
+}
+
+@-webkit-keyframes  p2_circle_outer{
+    0%{
+        -webkit-transform : rotate(0deg);
+        -o-transform      : rotate(0deg);
+        -ms-transform     :  rotate(0deg);
+        transform         :  rotate(0deg);
+    }
+    100%{
+        -webkit-transform : rotate(720deg);
+        -o-transform      : rotate(720deg);
+        -ms-transform     :  rotate(720deg);
+        transform         :  rotate(720deg);
+    }
+}
 
 
 #page2>.p2_2018{
@@ -293,11 +357,12 @@ html,body{
 }
 
 
-/* pg 3 */
 
+/* ----------pg 3 ------------*/
 #page1 {
     display: none;
 }
+
 #page3>.bg{
     background: url('../images/p3_bg.jpg') no-repeat center center;
     background-size: 100%;
@@ -325,7 +390,6 @@ html,body{
     margin:auto;
     background: url('../images/p3_title.png') no-repeat center center;
     background-size: 100%;
-
 }
 
 #page3 > .p3_first {
@@ -336,8 +400,8 @@ html,body{
     left:3.75vw;
     background: url('../images/p3_couplet_first.png') no-repeat center center;
     background-size: 100%;
-
 }
+
 #page3 > .p3_second {
     width:22.8125vw;
     height:41.625vh;
@@ -346,7 +410,6 @@ html,body{
     right:3.75vw;
     background: url('../images/p3_couplet_second.png') no-repeat center center;
     background-size: 100%;
-
 }
 
 #page3 > .p3_blessing{
@@ -356,10 +419,42 @@ html,body{
     right:0;
     bottom: 10vh;
     left:35vw;
-
     background:url("../images/p3_blessing.png") no-repeat center center;
     background-size: 100%;
     border-radius: 50%;
 
+    animation:p3_blessing 2s linear infinite;
+    -webkit-animation:p3_blessing 2s linear infinite;
 
+}
+
+/*福字*/
+@keyframes p3_blessing{
+    0%{
+        -webkit-transform : rotate(0deg);
+        -o-transform      : rotate(0deg);
+        -ms-transform     :  rotate(0deg);
+        transform         :  rotate(0deg);
+    }
+    100%{
+        -webkit-transform : rotate(360deg);
+        -o-transform      : rotate(360deg);
+        -ms-transform     :  rotate(360deg);
+        transform         :  rotate(360deg);
+    }
+}
+
+@-webkit-keyframes  p3_blessing{
+    0%{
+        -webkit-transform : rotate(0deg);
+        -o-transform      : rotate(0deg);
+        -ms-transform     :  rotate(0deg);
+        transform         :  rotate(0deg);
+    }
+    100%{
+        -webkit-transform : rotate(360deg);
+        -o-transform      : rotate(360deg);
+        -ms-transform     :  rotate(360deg);
+        transform         :  rotate(360deg);
+    }
 }
