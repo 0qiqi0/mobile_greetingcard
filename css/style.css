@@ -47,7 +47,7 @@ html,body{
 
 #music >img.play{
     -webkit-animation: music_disc 4s linear infinite;
-   animation: music_disc 4s linear infinite;
+    animation: music_disc 4s linear infinite;
 }
 
 @-webkit-keyframes music_disc {
@@ -170,12 +170,12 @@ html,body{
 #page1 > .p1_imooc{
     position: absolute;
     right: 0;
-    bottom: 9vh;
+    bottom: 6vh;
     left:0;
-    background:url("../images/p1_imooc.png") no-repeat center center;
+    background:url("../images/p1_dog.png") no-repeat center center;
     background-size: 100%;
-    width:27.656vw;
-    height:18.63vh;
+    width:50.656vw;
+    height:33.63vh;
     margin:auto;
 }
 
@@ -209,15 +209,10 @@ html,body{
 
 }
 
-#page2>.bg{
-    background: url('../images/p2_bg.jpg') no-repeat center center;
-    background-size: 100%;
-}
-
-#page2 > #p2_bg_loading{
+#page2 > .p2_bg_loading{
     z-index: 4;
     background: #ef1639;
-            animation : p2_bg_loading 1s linear forwards;
+    animation : p2_bg_loading 1s linear forwards;
     -webkit-animation : p2_bg_loading 1s linear forwards;
 }
 
@@ -228,6 +223,12 @@ html,body{
 @-webkit-keyframes p2_bg_loading{
     0% {opacity: 1; }
     100% {opacity: 0; }
+}
+
+
+#page2>.bg{
+    background: url('../images/p2_bg.jpg') no-repeat center center;
+    background-size: 100%;
 }
 
 #page2>.p2_circle{
@@ -381,7 +382,7 @@ html,body{
     bottom:0;
     left:0;
     margin:auto;
-    background: url('../images/p2_2016.png') no-repeat center center;
+    background: url('../images/p2_2018.png') no-repeat center center;
     width:21.5vw;
     height:6.04vh;
     background-size: 100%;
@@ -461,7 +462,7 @@ html,body{
     height:32vw;
     position: absolute;
     right:0;
-    bottom: 10vh;
+    bottom: 40vh;
     left:35vw;
     background:url("../images/p3_blessing.png") no-repeat center center;
     background-size: 100%;
