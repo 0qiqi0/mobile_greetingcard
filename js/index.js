@@ -8,6 +8,9 @@ var page3 = document.getElementById("page3");
 var music = document.getElementById('music_c');
 var audio = document.getElementsByTagName('audio')[0];
 
+
+var one = document.getElementById('one');
+
 //vh,vw自适应问题.
 //第二页过渡完后全白解决:
 
@@ -40,17 +43,20 @@ music.onclick = function(){
 music.addEventListener('touchstart',function(event){
     if(audio.paused){
         audio.play();
-        this.setAttribute('class','play'); //播放唱片旋转动画,安卓4.0以下不行
-        //this.style.webkitAnimationPlayState = 'running'; //适用于苹果6p以下
-        this.style.animationPlayState = 'running'
-
+        //this.setAttribute('class','play');
+        this.style.webkitAnimationPlayState = 'running'; //适用于苹果6p以下
+        this.style.animationPlayState = 'running'//播放唱片旋转动画,安卓4.0以下不行
+        one.setAttribute('class','')
     }else{
         audio.pause();
-        this.setAttribute('class','');
-        //this.style.webkitAnimationPlayState ='paused';
+        this.style.webkitAnimationPlayState ='paused';
         this.style.animationPlayState = 'paused';
+        //console.log(one)
+        one.setAttribute('class','point')
+
     }
 },false);
+
 
 //点击屏幕开启好运
 page1.addEventListener('touchstart',function(event){
@@ -60,10 +66,10 @@ page1.addEventListener('touchstart',function(event){
     page3.style.display = 'block';
     page3.style.top     = '100%';
 
-/*    setTimeout(function(){
+    setTimeout(function(){
         page2.setAttribute('class','page fadeOut');
         page3.setAttribute('class','page fadeIn')
-    },5500);*/
+    },6800);
 
 },false);
 
