@@ -196,19 +196,36 @@ html,body{
     margin:auto;
 }
 
+/*box-shadow:2参数:模糊的程度 3参数:模糊的距离*/
 #page1 > .p1_words{
-    font-size: 2.134rem;
     position: absolute;
-    right:0;
-    bottom: 40px;
-    left:0;
+    bottom: 31px;
     text-align: center;
-    color: #231815;
     font-size: 5vw;
-    color: red;
+    color: white;
     letter-spacing: 0.4rem;
+
+    opacity: 0.9;
+    background: #ef1639;
+    border: 1.4px solid black;
+    border-radius: 4rem;
+    width:80%;
+    box-shadow:0 0 45px 3px #ef1639;
+    animation: p1_words_in .7s linear forwards;
+    -webkit-animation: p1_words_in .7s linear forwards;
+
+    line-height: 160%;
+
 }
 
+@keyframes p1_words_in{
+    0% {left:200%}
+    100% {left:10%}
+}
+@-webkit-keyframes p1_words_in{
+    0% {left:200%}
+    100% {left:10%}
+}
 
 
 
