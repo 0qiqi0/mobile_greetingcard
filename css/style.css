@@ -44,12 +44,9 @@ html,body{
     right:7%;
     width:28.421%;
     z-index: 1;
-
     -webkit-transform:rotate(-60deg);
     transform:rotate(-60deg);
-
 }
-
 
 /*唱片*/
 #music >img:last-of-type{
@@ -88,7 +85,6 @@ html,body{
         transform: rotate(360deg);
     }
 }
-
 
 .page{
     height:100%;
@@ -150,9 +146,9 @@ html,body{
     box-shadow: 0 0 10vw 10vw #d60b3b;
     -webkit-box-shadow :  0 0 10vw 10vw #d60b3b;
        -moz-box-shadow: 0 0 10vw 10vw #d60b3b;
-        -ms-box-shadow:  0 0 10vw 10vw #d60b3b;  //参数: 起点相对⬅左1上角位置的x,y坐标.虚化程度.虚化距离.颜色. -webkit-animation:;
-        animation:p1_lantern 0.5s infinite alternate;
-         -webkit-animation:p1_lantern 0.5s infinite alternate;
+        -ms-box-shadow:  0 0 10vw 10vw #d60b3b;  /*参数: 起点相对⬅左1上角位置的x,y坐标.虚化程度.虚化距离.颜色. -webkit-animation:;*/
+    animation:p1_lantern 0.5s infinite alternate;
+    -webkit-animation:p1_lantern 0.5s infinite alternate;
 
 }
 @keyframes p1_lantern {
@@ -213,7 +209,6 @@ html,body{
     box-shadow:0 0 45px 3px #ef1639;
     animation: p1_words_in .7s linear forwards;
     -webkit-animation: p1_words_in .7s linear forwards;
-
     line-height: 160%;
 
 }

@@ -8,7 +8,6 @@ var page3 = document.getElementById("page3");
 var music = document.getElementById('music_c');
 var audio = document.getElementsByTagName('audio')[0];
 
-
 var one = document.getElementById('one');
 
 //vh,vw自适应问题.
@@ -53,7 +52,6 @@ music.addEventListener('touchstart',function(event){
         this.style.animationPlayState = 'paused';
         //console.log(one)
         one.setAttribute('class','point')
-
     }
 },false);
 
