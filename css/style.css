@@ -20,7 +20,7 @@ html,body{
     z-index: 5;
     width:15vw;
     height: 15vw;
-    border: 4px solid #ef1639;
+    border: 0.4vh solid #ef1639;
     border-radius: 50%;
     background-color: #fff;
 }
@@ -195,7 +195,7 @@ html,body{
 /*box-shadow:2参数:模糊的程度 3参数:模糊的距离*/
 #page1 > .p1_words{
     position: absolute;
-    bottom: 31px;
+    bottom: 5vh;
     text-align: center;
     font-size: 5vw;
     color: white;
@@ -203,10 +203,10 @@ html,body{
 
     opacity: 0.9;
     background: #ef1639;
-    border: 1.4px solid black;
+    border: 0.25vh solid black;
     border-radius: 4rem;
     width:80%;
-    box-shadow:0 0 45px 3px #ef1639;
+    box-shadow:0 0 45px 4px #ef1639;
     animation: p1_words_in .7s linear forwards;
     -webkit-animation: p1_words_in .7s linear forwards;
     line-height: 160%;
