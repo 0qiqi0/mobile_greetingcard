@@ -103,13 +103,23 @@ html,body{
 
 /* --------pg 1 -------*/
 #page1>.bg{
-    background: url('../images/p1_bg.jpg') no-repeat center center;
-    background-size: 100%;
+    background: url('../images/p1_bg.jpg') no-repeat center center fixed;
+    background-size: 100% 100%;
 }
-
+#page1>.begin{
+    position: absolute;
+    top:22%;
+    right:0;
+    left:0;
+    margin:auto;
+    font-size: 3.506rem;
+    text-align: center;
+    color:#fff;
+    z-index: 5;
+}
 #page1>.p1_lantern {
     position: absolute;
-    top:-3.4%;
+    top:-9.4%;
     right:0;
     left:0;
     margin:auto;
@@ -227,8 +237,8 @@ html,body{
 /* pg 2 */
 #page2 {
     display: none;
-    transition: .5s;
-    -webkit-transition: .5s;
+    transition: .7s;
+    -webkit-transition: .7s;
 }
 
 
@@ -252,8 +262,8 @@ html,body{
 
 
 #page2>.bg{
-    background: url('../images/p2_bg.jpg') no-repeat center center;
-    background-size: 100%;
+    background: url('../images/p2_bg.jpg') no-repeat center center fixed;
+    background-size: 100% 100%;
 }
 
 #page2>.p2_circle{
@@ -287,7 +297,7 @@ html,body{
     content:'';
     background: url('../images/p2_circle_middle.png') no-repeat center center;
 
-    background-size: 100%;
+    background-size: 100% 100%;
 
     width:45.625vw;
     height:45.625vw;
@@ -436,23 +446,32 @@ html,body{
 /* ----------pg 3 ------------*/
 #page1 {
     display: block;
+    position: absolute;
+
 }
 
 #page3 {
     display: none;
-    transition:.5s;
-    -webkit-transition:.5s;
+    transition:.7s;
+    -webkit-transition:.7s;
 }
 
 #page3.fadeIn {
+
     -webkit-transform: translate(0,-100%);
     transform: translate(0,-100%);
+}
+
+#page3.fadeOut{
+    opacity :.3;
+    transform:translate(0,-100%);
+    -webkit-transform:translate(0,-100%);
 }
 
 
 #page3>.bg{
     background: url('../images/p3_bg.jpg') no-repeat center center;
-    background-size: 100%;
+    background-size: 100% 100%;
 }
 
 #page3 > .p3_logo{

@@ -13,6 +13,11 @@ var one = document.getElementById('one');
 //vh,vw自适应问题.
 //第二页过渡完后全白解决:
 
+
+window.onload = function(){
+    audio.play();
+};
+
 audio.addEventListener('ended',function(event){
     music.setAttribute('class',''); //让唱片磁头移动开
 
@@ -61,13 +66,27 @@ page1.addEventListener('touchstart',function(event){
     page1.style.display = 'none';
 
     page2.style.display = 'block';
-    page3.style.display = 'block';
-    page3.style.top     = '100%';
+
+    //page3.style.display = 'block';
+    //page3.style.top     = '100%';
 
     setTimeout(function(){
+        page3.style.display = 'block';
+        page3.style.top     = '100%';
         page2.setAttribute('class','page fadeOut');
         page3.setAttribute('class','page fadeIn')
-    },6800);
+    },4000);
+
+},false);
+
+page2.addEventListener('touchstart',function(event){
+    setTimeout(function(){
+        page3.style.display = 'block';
+        page3.style.top     = '100%';
+        page2.setAttribute('class','page fadeOut');
+        page3.setAttribute('class','page fadeIn')
+    },500);
+
 
 },false);
 
